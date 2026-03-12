@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateX(28px) scale(1.02); }
+  to   { opacity: 1; transform: translateX(0)    scale(1.02); }
+}
+@keyframes heroSlideOut {
+  from { opacity: 1; transform: translateX(0)     scale(1.02); }
+  to   { opacity: 0; transform: translateX(-28px) scale(1.02); }
+}
+.hero-slide-in { animation: heroSlideIn 900ms ease both; }
+.hero-slide-out { animation: heroSlideOut 900ms ease both; }
