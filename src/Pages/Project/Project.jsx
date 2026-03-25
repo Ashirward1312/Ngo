@@ -1,5 +1,5 @@
-// src/Pages/Projects/Projects.jsx
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 import waterImg from "../img/water1.png";
 import treeImg from "../img/tree3.jpg";
@@ -506,6 +506,37 @@ export default function Projects() {
                   Trusted by <span className="font-semibold text-gray-700">4,000+ families</span>{" "}
                   across Chhattisgarh
                 </p>
+              </div>
+            </FadeIn>
+
+            {/* ========== BOTTOM CTA SECTION ========== */}
+            <FadeIn delay={500}>
+              <div className="mt-20 rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50 to-amber-50 p-8 text-center md:p-14">
+                <h3 className="text-2xl font-bold text-gray-900 md:text-3xl">
+                  Support Our Initiatives
+                </h3>
+                <p className="mx-auto mt-3 max-w-lg text-gray-600">
+                  Your involvement can help us reach more villages and transform more lives. 
+                  Join us as a volunteer or partner with our mission.
+                </p>
+
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-orange-200 transition-all hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5"
+                  >
+                    Join as Volunteer
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-orange-200 bg-white px-8 py-3.5 text-sm font-bold text-orange-600 transition-all hover:bg-orange-50 hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
               </div>
             </FadeIn>
           </div>

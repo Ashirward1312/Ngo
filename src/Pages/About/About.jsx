@@ -1,5 +1,5 @@
-// src/Pages/About/About.jsx
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import aboutImg from "../img/hero1.jpeg";
 
 /* ---------- Fade-in on scroll ---------- */
@@ -202,18 +202,18 @@ export default function About() {
 
                   {/* ✅ Two CTA Buttons (Programs + Contact) */}
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <a
-                      href="/projects"
+                    <Link
+                      to="/projects"
                       className="inline-flex items-center justify-center rounded-2xl bg-orange-600 px-6 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-orange-700"
                     >
                       View Programs
-                    </a>
-                    <a
-                      href="#contact"
+                    </Link>
+                    <Link
+                      to="/contact"
                       className="inline-flex items-center justify-center rounded-2xl border border-orange-200 bg-white px-6 py-3 text-sm font-extrabold text-orange-700 transition hover:bg-orange-50"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
