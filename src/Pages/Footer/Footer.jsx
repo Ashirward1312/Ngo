@@ -88,15 +88,16 @@ export default function Footer() {
           <div className="space-y-4 text-sm text-slate-300">
             <p className="flex items-center gap-3 hover:text-orange-400 transition">
               <FaPhoneAlt className="text-orange-500" />
-              +91 98271 98000
+              +91 93294-45769
             </p>
 
             <p className="flex items-center gap-3 hover:text-orange-400 transition">
               <FaEnvelope className="text-orange-500" />
-              info@sambhav.org
+              sansthansambhav9@gmail.com
             </p>
 
-            <p>Raipur, Chhattisgarh, India</p>
+            <p>House No. 142, Riddhi Siddhi Lotus Park
+              Boriyakala, Raipur, Chhattisgarh</p>
           </div>
         </div>
 

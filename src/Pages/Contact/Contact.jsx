@@ -335,7 +335,7 @@ export default function Contact() {
                         href="tel:+917415315166"
                         className="font-semibold text-gray-800 transition-colors hover:text-orange-600"
                       >
-                        +91 74153 15166
+                        +91 93294-45769
                       </a>
                     </InfoItem>
 
@@ -344,7 +344,7 @@ export default function Contact() {
                         href="mailto:sansthansambhav@gmail.com"
                         className="font-semibold text-gray-800 transition-colors hover:text-orange-600"
                       >
-                        sansthansambhav@gmail.com
+                        sansthansambhav9@gmail.com
                       </a>
                     </InfoItem>
 
@@ -605,7 +605,7 @@ export default function Contact() {
 
                   <div className="flex flex-wrap items-center justify-center gap-3">
                     <a
-                      href="tel:+917415315166"
+                      href="tel:+919329445769"
                       className="group inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-orange-700 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                     >
                       <span className="transition-transform duration-300 group-hover:scale-110">
@@ -615,7 +615,7 @@ export default function Contact() {
                     </a>
 
                     <a
-                      href="https://wa.me/917415315166"
+                      href="https://wa.me/919329445769"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"

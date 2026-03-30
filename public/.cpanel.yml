@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/spfituzk/sambhavsansthan.org/
+    - /bin/cp * $DEPLOYPATH

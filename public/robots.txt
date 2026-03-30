@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sambhavsansthan.org/sitemap.xml
