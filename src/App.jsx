@@ -8,6 +8,7 @@ import ScrollToTop from "./Pages/Footer/Scroll"; // 👈 ADD THIS
 import Hero from "./Pages/Hero/Hero";
 import About from "./Pages/About/About";
 import Project from "./Pages/Project/Project";
+import Skill from "./Pages/Project/Skill";
 import Gallery from "./Pages/Gallery/Gallery";
 import Contact from "./Pages/Contact/Contact";
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/skill" element={<Skill />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

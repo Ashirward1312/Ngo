@@ -9,7 +9,9 @@ export default function Header() {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Projects", path: "/projects" },
+    { label: "Skill Development & Training Programs", path: "/skill" },
     { label: "Gallery", path: "/gallery" },
+
   ];
 
   return (
@@ -46,7 +48,7 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          
+
           {/* Contact CTA */}
           <Link
             to="/contact"
