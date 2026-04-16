@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import aboutImg from "../img/hero1.jpeg";
+import aboutImg from "../img/hero1.webp";
 
 /* ---------- Fade-in on scroll ---------- */
 function useFadeIn() {

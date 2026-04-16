@@ -1,25 +1,25 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 
-import g1 from "../img/hero.jpeg";
-import g2 from "../img/gallery8.jpeg";
-import g3 from "../img/hero2.jpeg";
-import g4 from "../img/hero3.jpeg";
-import g5 from "../img/hero4.jpeg";
-import g6 from "../img/gallery.jpeg";
-import g7 from "../img/gallery1.jpeg";
-import g8 from "../img/gallery2.jpeg";
-import g9 from "../img/gallery3.jpeg";
-import g10 from "../img/gallery4.jpeg";
-import g11 from "../img/gallery5.jpeg";
-import g12 from "../img/gallery6.jpeg";
-import g13 from "../img/gallery7.jpeg";
-import g14 from "../img/hero1.jpeg";
-import g15 from "../img/gallery9.jpeg";
-import g16 from "../img/gallery10.jpeg";
-import g17 from "../img/gallery11.jpeg";
-import g18 from "../img/gallery12.jpeg";
-import g19 from "../img/gallery13.jpeg";
+import g1 from "../img/hero.webp";
+import g2 from "../img/gallery8.webp";
+import g3 from "../img/hero2.webp";
+import g4 from "../img/hero3.webp";
+import g5 from "../img/hero4.webp";
+import g6 from "../img/gallery.webp";
+import g7 from "../img/gallery1.webp";
+import g8 from "../img/gallery2.webp";
+import g9 from "../img/gallery3.webp";
+import g10 from "../img/gallery4.webp";
+import g11 from "../img/gallery5.webp";
+import g12 from "../img/gallery6.webp";
+import g13 from "../img/gallery7.webp";
+import g14 from "../img/hero1.webp";
+import g15 from "../img/gallery9.webp";
+import g16 from "../img/gallery10.webp";
+import g17 from "../img/gallery11.webp";
+import g18 from "../img/gallery12.webp";
+import g19 from "../img/gallery13.webp";
 
 /* ---------- Fade-in on scroll ---------- */
 function useFadeIn() {
@@ -158,13 +158,11 @@ function Lightbox({ open, onClose, images, index, setIndex }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/90 backdrop-blur-md" 
-        onClick={onClose} 
+      <div
+        className="absolute inset-0 bg-black/90 backdrop-blur-md"
+        onClick={onClose}
       />
 
-      {/* Close button */}
       <button
         type="button"
         onClick={onClose}
@@ -174,22 +172,20 @@ function Lightbox({ open, onClose, images, index, setIndex }) {
         <CloseIcon />
       </button>
 
-      {/* Counter */}
       <div className="absolute left-4 top-4 z-20 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white">
         {index + 1} / {images.length}
       </div>
 
-      {/* Image Container */}
       <div className="relative z-10 flex max-h-[85vh] max-w-5xl items-center justify-center">
         <img
           src={current}
           alt={`Gallery ${index + 1}`}
           className="max-h-[85vh] max-w-full rounded-xl object-contain"
           draggable={false}
+          decoding="async"
         />
       </div>
 
-      {/* Navigation */}
       <button
         type="button"
         onClick={goPrev}
@@ -221,27 +217,24 @@ function GalleryCard({ image, index, onClick }) {
         className="group relative w-full overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
         aria-label={`View image ${index + 1}`}
       >
-        {/* Image Container - Fixed aspect ratio */}
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
           <img
             src={image}
             alt={`Gallery ${index + 1}`}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             draggable={false}
+            loading="lazy"
+            decoding="async"
           />
 
-          {/* Hover Overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-500 group-hover:bg-black/50">
             <div className="flex h-16 w-16 scale-0 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white shadow-lg transition-all duration-500 group-hover:scale-100">
               <ExpandIcon />
             </div>
           </div>
 
-          {/* Subtle Border */}
           <div className="absolute inset-0 border-0 border-orange-500/0 transition-all duration-300 group-hover:border-4 group-hover:border-orange-500/30" />
         </div>
-
-       
       </button>
     </FadeIn>
   );
@@ -250,7 +243,9 @@ function GalleryCard({ image, index, onClick }) {
 /* ===================== MAIN ===================== */
 export default function Gallery() {
   const mainImage = g1;
-  const galleryImages = [g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19];
+  const galleryImages = [
+    g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19,
+  ];
   const allImages = [mainImage, ...galleryImages];
 
   const [open, setOpen] = useState(false);
@@ -260,6 +255,22 @@ export default function Gallery() {
     setIndex(i);
     setOpen(true);
   };
+
+  // ✅ FIX: render strings (not object)
+  const highlights = [
+    "Water Conservation Program",
+    "Tree Plantation Campaign",
+    "Swadeshi Awareness Campaign",
+    "Cultural & Rural Festivals",
+    "Health & Medical Programs",
+    "Women Empowerment",
+    "Tailoring & Garment Making",
+    "Welding & Fabrication Training",
+    "Fashion Design Training",
+    "Plumbing & Pipe Fitting",
+    "Electrical Wiring & Maintenance",
+    "Carpentry & Woodworking Training",
+  ];
 
   return (
     <>
@@ -277,11 +288,9 @@ export default function Gallery() {
 
       <section id="gallery" className="bg-gray-50 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          
           {/* ========== HEADER ========== */}
           <FadeIn>
             <div className="mb-14 text-center">
-              {/* Top Badge */}
               <div className="mb-5 flex items-center justify-center">
                 <div className="flex items-center gap-2 rounded-full bg-orange-500 px-5 py-2 text-white shadow-lg shadow-orange-200">
                   <PlayIcon />
@@ -289,7 +298,6 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Main Heading */}
               <h2 className="text-4xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
                 Glimpses of Our
               </h2>
@@ -299,23 +307,15 @@ export default function Gallery() {
                 </span>
               </h2>
 
-              {/* Subtitle */}
               <p className="mx-auto mt-6 max-w-xl text-lg text-gray-600">
                 See how our volunteers are making a difference in communities across Chhattisgarh
               </p>
 
-              {/* Initiatives/Programs Highlights */}
+              {/* ✅ FIXED HIGHLIGHTS (no objects) */}
               <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
-                {[
-                  "Water Conservation Program",
-                  "Tree Plantation Campaign",
-                  "Swadeshi Awareness Campaign",
-                  "Cultural & Rural Festivals",
-                  "Health & Medical Programs",
-                  "Women Empowerment"
-                ].map((text, i) => (
-                  <span 
-                    key={i} 
+                {highlights.map((text, i) => (
+                  <span
+                    key={text}
                     className="inline-flex items-center rounded-full border border-orange-100 bg-orange-50/50 px-4 py-1.5 text-xs font-medium text-orange-700 backdrop-blur-sm transition-all hover:border-orange-200 hover:bg-orange-100/80"
                   >
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-orange-500" />
@@ -324,7 +324,6 @@ export default function Gallery() {
                 ))}
               </div>
 
-              {/* Decorative Element */}
               <div className="mt-8 flex items-center justify-center gap-2">
                 <div className="h-1 w-3 rounded-full bg-orange-300" />
                 <div className="h-1.5 w-12 rounded-full bg-gradient-to-r from-orange-500 to-amber-500" />
@@ -341,32 +340,26 @@ export default function Gallery() {
               className="group relative mb-8 w-full overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-300 hover:shadow-2xl"
               aria-label="View main image"
             >
-              {/* Banner Image Container */}
               <div className="relative w-full overflow-hidden">
                 <img
                   src={mainImage}
                   alt="Main Banner - Our Volunteers"
                   className="w-full object-contain"
                   draggable={false}
-                  style={{ maxHeight: '500px' }}
+                  style={{ maxHeight: "500px" }}
+                  loading="eager"
+                  decoding="async"
                 />
 
-                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
                   <div className="flex items-end justify-between">
-                    
-
-                    {/* Expand Button */}
                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-gray-900 shadow-lg transition-all duration-300 group-hover:scale-110">
                       <ExpandIcon />
                     </div>
                   </div>
                 </div>
-
-                {/* Corner Badge */}
-                
               </div>
             </button>
           </FadeIn>
@@ -377,7 +370,7 @@ export default function Gallery() {
               <GalleryCard
                 key={i}
                 image={img}
-                index={i + 2}
+                index={i + 1}
                 onClick={() => openLightbox(i + 1)}
               />
             ))}
@@ -386,10 +379,6 @@ export default function Gallery() {
           {/* ========== BOTTOM SECTION ========== */}
           <FadeIn delay={200}>
             <div className="mt-16 rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50 to-amber-50 p-8 text-center md:p-12">
-              {/* Stats Row */}
-              
-
-              {/* CTA */}
               <h3 className="text-xl font-bold text-gray-900 md:text-2xl">
                 Be Part of Our Story
               </h3>
@@ -404,7 +393,13 @@ export default function Gallery() {
                 >
                   Join as Volunteer
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                      d="M5 12h14M12 5l7 7-7 7"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </Link>
                 <Link

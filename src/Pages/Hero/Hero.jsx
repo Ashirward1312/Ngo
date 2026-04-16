@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-// import hero from "../img/hero.jpeg";
-import hero1 from "../img/medical.jpg";
-import hero3 from "../img/tree3.jpg";
-import hero4 from "../img/rain.jpg";
+import hero1 from "../img/medical.webp";
+import hero3 from "../img/tree3.webp";
+import hero4 from "../img/rain.webp";
 
 export default function Hero() {
   const slides = useMemo(() => [ hero1, hero3, hero4], []);
