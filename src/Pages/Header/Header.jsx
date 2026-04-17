@@ -9,7 +9,8 @@ export default function Header() {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Projects", path: "/projects" },
-    { label: "Skill Development & Training Programs", path: "/skill" },
+    { label: "Skill Development Program", path: "/skill" },
+    { label: "Awareness & Wellness", path: "/awareness" },
     { label: "Gallery", path: "/gallery" },
 
   ];

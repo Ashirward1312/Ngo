@@ -264,12 +264,13 @@ export default function Gallery() {
     "Cultural & Rural Festivals",
     "Health & Medical Programs",
     "Women Empowerment",
-    "Tailoring & Garment Making",
-    "Welding & Fabrication Training",
-    "Fashion Design Training",
-    "Plumbing & Pipe Fitting",
-    "Electrical Wiring & Maintenance",
-    "Carpentry & Woodworking Training",
+    "Disaster Management & Safety Awareness Program",
+    "English Speaking & Confidence Building Program",
+    "Government Exam Preparation Support Program",
+    "Human Rights Awareness Program",
+    "Social Awareness & Community Outreach Program",
+    "Yoga & Fitness Sessions",
+    "Nasha Mukti Awareness Program",
   ];
 
   return (

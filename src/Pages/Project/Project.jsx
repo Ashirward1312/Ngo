@@ -303,7 +303,7 @@ const projects = [
 ];
 
 const impactStats = [
-  { value: "12", label: "Major Programs", icon: "📋", color: "blue" },
+  { value: "18", label: "Major Programs", icon: "📋", color: "blue" },
   { value: "150+", label: "Villages Reached", icon: "🏘️", color: "green" },
   { value: "4000+", label: "Families Impacted", icon: "👨‍👩‍👧‍👦", color: "orange" },
   { value: "10000+", label: "Trees Planted", icon: "🌳", color: "purple" },
