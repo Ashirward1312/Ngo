@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import aboutImg from "../img/hero1.webp";
 
@@ -76,6 +76,81 @@ function IconBadge({ children }) {
     </span>
   );
 }
+
+/* ---------- Animated Counter ---------- */
+function AnimatedCounter({ value, duration = 2000 }) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
+  const suffix = value.replace(/[0-9]/g, "");
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          let start = 0;
+          const increment = numericValue / (duration / 16);
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= numericValue) {
+              setCount(numericValue);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(start));
+            }
+          }, 16);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [numericValue, duration, hasAnimated]);
+
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
+}
+
+/* ---------- Stats Card ---------- */
+function StatsCard({ stat, index }) {
+  const colorStyles = {
+    blue: "border-t-blue-500 hover:bg-blue-50/50",
+    green: "border-t-green-500 hover:bg-green-50/50",
+    orange: "border-t-orange-500 hover:bg-orange-50/50",
+    purple: "border-t-purple-500 hover:bg-purple-50/50",
+  };
+
+  return (
+    <FadeIn delay={index * 100}>
+      <div
+        className={`rounded-2xl border border-gray-100 border-t-4 bg-white p-6 text-center shadow-lg shadow-gray-200/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${colorStyles[stat.color]}`}
+      >
+        <div className="mb-3 text-3xl">{stat.icon}</div>
+        <div className="text-3xl font-bold text-gray-900">
+          <AnimatedCounter value={stat.value} />
+        </div>
+        <div className="mt-1 text-sm font-semibold text-gray-500 uppercase tracking-wider">{stat.label}</div>
+      </div>
+    </FadeIn>
+  );
+}
+
+const impactStats = [
+  { value: "18", label: "Major Programs", icon: "📋", color: "blue" },
+  { value: "150+", label: "Villages Reached", icon: "🏘️", color: "green" },
+  { value: "4000+", label: "Families Impacted", icon: "👨‍👩‍👧‍👦", color: "orange" },
+  { value: "10000+", label: "Trees Planted", icon: "🌳", color: "purple" },
+];
 
 /* ===================== MAIN ===================== */
 export default function About() {
@@ -219,6 +294,30 @@ export default function About() {
               </div>
             </div>
           </FadeIn>
+
+          {/* ========== IMPACT SECTION ========== */}
+          <div className="mt-24">
+            <FadeIn>
+              <div className="mb-12 text-center">
+                <h3 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                  Our Journey of{" "}
+                  <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">
+                    Impact
+                  </span>
+                </h3>
+                <p className="mx-auto mt-3 max-w-lg text-lg text-gray-600">
+                  Real numbers reflecting real change across Chhattisgarh — building a stronger community every day.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+              {impactStats.map((stat, i) => (
+                <StatsCard key={stat.label} stat={stat} index={i} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

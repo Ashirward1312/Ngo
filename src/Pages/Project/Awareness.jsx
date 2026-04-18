@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 
 // Awareness & Wellness images (use same names/paths)
 import Disaster from "../img/Diaster.webp";
-import Englishspeaking from "../img/English.webp";
-import Govtexamprep from "../img/govexam.webp";
 import Humanrights from "../img/humanrights.webp";
-import Socialawarness from "../img/socialawarness.webp";
+import Socialawarness from "../img/socialawreness.webp";
 import Yoga from "../img/Yoga fitness.webp";
 import Nashamukti from "../img/nasha mukti.webp";
+import SwadeshiImg from "../img/swadesi.webp";
+import WaterImg from "../img/water1.webp";
+import TreeImg from "../img/tree3.webp";
+import CulturalImg from "../img/festival.webp";
+import HealthImg from "../img/medical.webp";
+import WelfareImg from "../img/welfare.webp";
+import EmpoweringImg from "../img/socialawreness.webp";
 
 /* ---------- Fade-in on scroll ---------- */
 function useFadeIn() {
@@ -68,6 +73,95 @@ function AwarenessIcon() {
   );
 }
 
+function WaterIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function TreeIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 22V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M12 2C8 6 4 9 4 13a8 8 0 0 0 16 0c0-4-4-7-8-11Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function FestivalIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 2v4M4.93 4.93l2.83 2.83M2 12h4M4.93 19.07l2.83-2.83M12 18v4M16.24 16.24l2.83 2.83M18 12h4M16.24 7.76l2.83-2.83"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function HealthIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M8 2h8v4h4v8h-4v4H8v-4H4V6h4V2Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function WelfareIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function GovIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M3 21h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 10h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M5 21V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 21V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15 21V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M19 21V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 10l9-7 9 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ShopIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M3 9l1.5-5h15L21 9" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M9 21V14h6v7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
 function CheckIcon() {
   return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
@@ -86,6 +180,136 @@ function CheckIcon() {
 const programs = [
   {
     id: 1,
+    icon: <WelfareIcon />,
+    badge: "Social Welfare",
+    title: "Social Welfare Development Schemes",
+    subtitle: "Navigating and facilitating access to essential social welfare programs for holistic community development.",
+    image: WelfareImg,
+    color: "from-orange-600 to-red-600",
+    colorLight: "bg-orange-50 text-orange-700",
+    checkColor: "bg-orange-600",
+    accentColor: "bg-orange-600",
+    activities: [
+      "Guidance on social security & pension schemes",
+      "Support for community development projects",
+      "Facilitating access to welfare benefits",
+      "Awareness on community rights and duties",
+    ],
+  },
+  {
+    id: 2,
+    icon: <GovIcon />,
+    badge: "Governance",
+    title: "Government Scheme Awareness",
+    subtitle: "Helping citizens understand and apply for various state and central government initiatives for public benefit.",
+    image: EmpoweringImg,
+    color: "from-blue-600 to-cyan-600",
+    colorLight: "bg-blue-50 text-blue-700",
+    checkColor: "bg-blue-600",
+    accentColor: "bg-blue-600",
+    activities: [
+      "Workshops on state and central govt schemes",
+      "Documentation and application assistance",
+      "Information on subsidies and grants",
+      "Support for rural development initiatives",
+    ],
+  },
+  {
+    id: 3,
+    icon: <ShopIcon />,
+    badge: "Economic",
+    title: "Swadeshi Awareness Campaign",
+    subtitle: "Promoting local products and traditional industries to build a self-reliant rural economy.",
+    image: SwadeshiImg,
+    color: "from-orange-500 to-amber-500",
+    colorLight: "bg-orange-50 text-orange-600",
+    checkColor: "bg-orange-500",
+    accentColor: "bg-orange-500",
+    activities: [
+      "Promotion of traditional local crafts",
+      "Support for village-based industries",
+      "Market linkage for rural artisans",
+      "Indigenous product awareness drives",
+    ],
+  },
+  {
+    id: 4,
+    icon: <WaterIcon />,
+    badge: "Environmental",
+    title: "Water Conservation Program",
+    subtitle:
+      "Comprehensive initiatives empowering communities to protect and sustain their most vital natural resource.",
+    image: WaterImg,
+    color: "from-blue-500 to-cyan-500",
+    colorLight: "bg-blue-50 text-blue-600",
+    checkColor: "bg-blue-500",
+    accentColor: "bg-blue-500",
+    activities: [
+      "Cleaning & restoration of ponds and wells",
+      "Rainwater harvesting awareness campaigns",
+      "Public participation drives in water saving",
+      "Community education on resource management",
+    ],
+  },
+  {
+    id: 5,
+    icon: <TreeIcon />,
+    badge: "Environmental",
+    title: "Tree Plantation Campaign",
+    subtitle:
+      "Large-scale environmental conservation through strategic tree plantation drives across the region.",
+    image: TreeImg,
+    color: "from-green-500 to-emerald-500",
+    colorLight: "bg-green-50 text-green-600",
+    checkColor: "bg-green-500",
+    accentColor: "bg-green-500",
+    activities: [
+      "10,000+ trees planted and maintained",
+      "Environmental awareness & education",
+      "Community-based plantation programs",
+      "Long-term care and monitoring systems",
+    ],
+  },
+  {
+    id: 6,
+    icon: <HealthIcon />,
+    badge: "Healthcare",
+    title: "Health & Medical Programs",
+    subtitle:
+      "Delivering health awareness, free medical camps, and disease prevention to underserved communities.",
+    image: HealthImg,
+    color: "from-teal-500 to-cyan-500",
+    colorLight: "bg-teal-50 text-teal-600",
+    checkColor: "bg-teal-500",
+    accentColor: "bg-teal-500",
+    activities: [
+      "Health camps in rural and urban areas",
+      "HIV/AIDS and TB awareness campaigns",
+      "Free medicine distribution programs",
+      "Sanitation and hygiene awareness",
+    ],
+  },
+  {
+    id: 7,
+    icon: <FestivalIcon />,
+    badge: "Cultural",
+    title: "Cultural & Rural Festivals",
+    subtitle:
+      "Celebrating and preserving rich cultural heritage through community gatherings and traditional events.",
+    image: CulturalImg,
+    color: "from-purple-500 to-violet-500",
+    colorLight: "bg-purple-50 text-purple-600",
+    checkColor: "bg-purple-500",
+    accentColor: "bg-purple-500",
+    activities: [
+      "Balram Jayanti and cultural celebrations",
+      "Gau Pujan ceremonies and awareness",
+      "Community gatherings and local fairs",
+      "Traditional cultural performances",
+    ],
+  },
+  {
+    id: 8,
     icon: <AwarenessIcon />,
     badge: "Awareness",
     title: "Disaster Management & Safety Awareness",
@@ -104,45 +328,7 @@ const programs = [
     ],
   },
   {
-    id: 2,
-    icon: <AwarenessIcon />,
-    badge: "Communication",
-    title: "English Speaking & Confidence Building",
-    subtitle:
-      "Practical speaking practice for daily communication and self-introduction.",
-    image: Englishspeaking,
-    color: "from-blue-600 to-indigo-600",
-    colorLight: "bg-blue-50 text-blue-700",
-    checkColor: "bg-blue-600",
-    accentColor: "bg-blue-600",
-    activities: [
-      "Daily-use vocabulary and sentences",
-      "Group conversation practice",
-      "Pronunciation basics",
-      "Interview and self-introduction practice",
-    ],
-  },
-  {
-    id: 3,
-    icon: <AwarenessIcon />,
-    badge: "Education Support",
-    title: "Government Exam Preparation Support",
-    subtitle:
-      "Guidance sessions to build study routine, planning, and practice habits.",
-    image: Govtexamprep,
-    color: "from-emerald-600 to-green-600",
-    colorLight: "bg-green-50 text-green-700",
-    checkColor: "bg-green-600",
-    accentColor: "bg-green-600",
-    activities: [
-      "Syllabus orientation and topic planning",
-      "Reasoning and general awareness basics",
-      "Time management and revision planning",
-      "Test practice and feedback sessions",
-    ],
-  },
-  {
-    id: 4,
+    id: 9,
     icon: <AwarenessIcon />,
     badge: "Awareness",
     title: "Human Rights Awareness Program",
@@ -161,7 +347,7 @@ const programs = [
     ],
   },
   {
-    id: 5,
+    id: 10,
     icon: <AwarenessIcon />,
     badge: "Community",
     title: "Social Awareness & Community Outreach",
@@ -180,7 +366,7 @@ const programs = [
     ],
   },
   {
-    id: 6,
+    id: 11,
     icon: <AwarenessIcon />,
     badge: "Wellness",
     title: "Yoga & Fitness Sessions",
@@ -199,7 +385,7 @@ const programs = [
     ],
   },
   {
-    id: 7,
+    id: 12,
     icon: <AwarenessIcon />,
     badge: "Awareness",
     title: "Nasha Mukti Awareness Program",

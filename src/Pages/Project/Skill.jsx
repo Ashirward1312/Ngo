@@ -8,6 +8,12 @@ import Fashion from "../img/fashion.webp";
 import Plumbing from "../img/plumbing.webp";
 import Carpenter from "../img/carpenter.webp";
 import Electric from "../img/electric.webp";
+import WomenImg from "../img/women copy.webp";
+import LiteracyImg from "../img/ltrecy.webp";
+import ICTImg from "../img/ict.webp";
+import LifeSkillsImg from "../img/empowering.webp";
+import EnglishImg from "../img/english speaking.webp";
+import GovExamImg from "../img/govtexam.webp";
 
 /* ---------- Fade-in on scroll ---------- */
 function useFadeIn() {
@@ -60,6 +66,51 @@ function SkillIcon() {
         </svg>
     );
 }
+
+function ShopIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M3 9l1.5-5h15L21 9" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M9 21V14h6v7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
+function WomenIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="5" stroke="currentColor" strokeWidth="2" />
+            <path d="M12 13v9M9 19h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    );
+}
+
+function ComputerIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2" />
+            <path d="M8 21h8M12 17v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    );
+}
+
+function BookIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" strokeWidth="2" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" strokeWidth="2" />
+        </svg>
+    );
+}
+
+function HeartIcon() {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" strokeWidth="2" />
+        </svg>
+    );
+}
 function CheckIcon() {
     return (
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
@@ -76,6 +127,114 @@ function CheckIcon() {
 
 /* ---------- Skill Programs (same content) ---------- */
 const skillPrograms = [
+    {
+        id: 1,
+        icon: <SkillIcon />,
+        badge: "Communication",
+        title: "English Speaking & Confidence Building",
+        subtitle: "Practical speaking practice for daily communication and self-introduction.",
+        image: EnglishImg,
+        color: "from-blue-600 to-indigo-600",
+        colorLight: "bg-blue-50 text-blue-700",
+        checkColor: "bg-blue-600",
+        accentColor: "bg-blue-600",
+        activities: [
+            "Daily-use vocabulary and sentences",
+            "Group conversation practice",
+            "Interview and self-introduction",
+            "Confidence building exercises",
+        ],
+    },
+    {
+        id: 2,
+        icon: <SkillIcon />,
+        badge: "Education Support",
+        title: "Government Exam Preparation Support",
+        subtitle: "Guidance sessions to build study routine, planning, and practice habits.",
+        image: GovExamImg,
+        color: "from-emerald-600 to-green-600",
+        colorLight: "bg-green-50 text-green-700",
+        checkColor: "bg-green-600",
+        accentColor: "bg-green-600",
+        activities: [
+            "Syllabus orientation and planning",
+            "General awareness and reasoning",
+            "Time management and revision",
+            "Test practice and mock sessions",
+        ],
+    },
+    {
+        id: 3,
+        icon: <ComputerIcon />,
+        badge: "Digital Skills",
+        title: "ICT & Digital Literacy Training",
+        subtitle: "Preparing youth and women for the digital age with essential computer skills and internet awareness.",
+        image: ICTImg,
+        color: "from-blue-600 to-indigo-500",
+        colorLight: "bg-blue-50 text-blue-700",
+        checkColor: "bg-blue-600",
+        accentColor: "bg-blue-600",
+        activities: [
+            "Basic computer operations and software use",
+            "Internet safety and digital communication",
+            "Mobile banking and e-governance awareness",
+            "Digital tools for small businesses",
+        ],
+    },
+    {
+        id: 4,
+        icon: <BookIcon />,
+        badge: "Education",
+        title: "Literacy & Foundational Learning",
+        subtitle: "Basic reading, writing, and numeracy skills to empower individuals in their daily lives.",
+        image: LiteracyImg,
+        color: "from-rose-500 to-orange-500",
+        colorLight: "bg-rose-50 text-rose-700",
+        checkColor: "bg-rose-600",
+        accentColor: "bg-rose-600",
+        activities: [
+            "Functional reading and writing practice",
+            "Basic numeracy for daily transactions",
+            "Signature and document reading skills",
+            "Continuing education and guidance",
+        ],
+    },
+    {
+        id: 5,
+        icon: <HeartIcon />,
+        badge: "Personal Development",
+        title: "Holistic Life Skills Training",
+        subtitle: "Developing critical thinking, problem-solving, and emotional intelligence for a better future.",
+        image: LifeSkillsImg,
+        color: "from-emerald-500 to-teal-500",
+        colorLight: "bg-emerald-50 text-emerald-700",
+        checkColor: "bg-emerald-600",
+        accentColor: "bg-emerald-600",
+        activities: [
+            "Communication and interpersonal skills",
+            "Time management and goal setting",
+            "Financial literacy and household budgeting",
+            "Health, hygiene, and wellness awareness",
+        ],
+    },
+    {
+        id: 6,
+        icon: <WomenIcon />,
+        badge: "Social Welfare",
+        title: "Women Empowerment",
+        subtitle: "Empowering women through vocational training, legal aid, and community-driven support systems.",
+        image: WomenImg,
+        color: "from-pink-500 to-rose-500",
+        colorLight: "bg-pink-50 text-pink-600",
+        checkColor: "bg-pink-500",
+        accentColor: "bg-pink-500",
+        activities: [
+            "Vocational training and skill development",
+            "Legal aid awareness and assistance",
+            "Women rehabilitation support systems",
+            "Self-help group formation and guidance",
+        ],
+    },
     {
         id: 7,
         icon: <SkillIcon />,
