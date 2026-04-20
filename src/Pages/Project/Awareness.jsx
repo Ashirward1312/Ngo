@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Awareness & Wellness images (use same names/paths)
 import Disaster from "../img/Diaster.webp";
 import Humanrights from "../img/humanrights.webp";
-import Socialawarness from "../img/socialawreness.webp";
+import Socialawarness from "../img/social.webp";
 import Yoga from "../img/Yoga fitness.webp";
 import Nashamukti from "../img/nasha mukti.webp";
 import SwadeshiImg from "../img/swadesi.webp";

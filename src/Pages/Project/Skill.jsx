@@ -203,7 +203,7 @@ const skillPrograms = [
         id: 5,
         icon: <HeartIcon />,
         badge: "Personal Development",
-        title: "Holistic Life Skills Training",
+        title: "Life Skills Training",
         subtitle: "Developing critical thinking, problem-solving, and emotional intelligence for a better future.",
         image: LifeSkillsImg,
         color: "from-emerald-500 to-teal-500",

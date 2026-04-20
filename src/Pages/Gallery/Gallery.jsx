@@ -271,6 +271,14 @@ export default function Gallery() {
     "Social Awareness & Community Outreach Program",
     "Yoga & Fitness Sessions",
     "Nasha Mukti Awareness Program",
+    "Literacy & Foundational Learning",
+    "Life Skills Training",
+    "ICT & Digital Literacy Training",
+    "Social Welfare Development Schemes",
+
+
+
+
   ];
 
   return (
